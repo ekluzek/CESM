@@ -62,9 +62,9 @@ or run CESM properly (see
 https://wiki.ucar.edu/display/ccsm/Fortran+Compiler+Bug+List for more
 details).
 
-We regularly test CESM on different systems with the different Fortran compiler versions:
-Please see `CESM2.0 Compiler/machine tested <https://docs.google.com/spreadsheets/d/15QUqsXD1Z0K_rYNTlykBvjTRt8s0XcQw0cfAj9DZbj0/edit#gid=0>`_
-for a spreadsheet of the results.
+CESM2 is tested on different systems with the different Fortran compiler versions:
+Please see `CESM2.0 Compiler/Machine Tests <https://docs.google.com/spreadsheets/d/15QUqsXD1Z0K_rYNTlykBvjTRt8s0XcQw0cfAj9DZbj0/edit#gid=0>`_
+for a spreadsheet of the latest results.
 
 
 More details on porting CESM
