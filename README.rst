@@ -60,9 +60,9 @@ among mainstream Fortran compilers that claim to support Fortran 2003,
 we have found numerous bugs. Thus, many compiler versions do *not* build
 or run CESM properly (see
 https://wiki.ucar.edu/display/ccsm/Fortran+Compiler+Bug+List for more
-details).
+details of older Fortran compiler versions).
 
-CESM2 is tested on different systems with the different Fortran compiler versions:
+CESM2 is tested on several different systems with the different Fortran compiler versions:
 Please see `CESM2.0 Compiler/Machine Tests <https://docs.google.com/spreadsheets/d/15QUqsXD1Z0K_rYNTlykBvjTRt8s0XcQw0cfAj9DZbj0/edit#gid=0>`_
 for a spreadsheet of the latest results.
 
