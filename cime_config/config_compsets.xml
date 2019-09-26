@@ -326,6 +326,11 @@
     <lname>1850_CAM60_CLM50%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%EVOLVE_WW3_BGC%BDRD</lname>
   </compset>
 
+  <compset>
+    <alias>B1850GRnoanthro</alias>
+    <lname>1850_CAM60_CLM50%BGC-NOANTHRO_CICE_POP2_RTM_CISM2%EVOLVE_SWAV</lname>
+  </compset>
+
   <!-- Include one CISM1 compset, mainly for testing purposes, to make sure that
        CISM1 can operate in a fully-coupled configuration. Main point is to
        check the PE layout. -->
