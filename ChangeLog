@@ -1,4 +1,521 @@
 ===============================================================
+Tag name: cesm2.1.2-rc.04
+Originator(s): CSEG
+Date: 14 Feb 2020 
+One-line Summary: Final release candidate.
+
+
+Component tags used for this CESM release candidate tag :
+
+components/cam                     https://github.com/ESCOMP/CAM/tree/cam_cesm2_1_rel_41
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/ESMCI/cime/tree/cime5.6.32
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/cism-release-cesm2.1.2_02
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.30
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.04
+components/pop                     https://github.com/ESCOMP/POP2-CESM/tree/pop2_cesm2_1_rel_n09
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.04
+components/ww3                     https://github.com/ESCOMP/WW3-CESM/tree/ww3_cesm2_1_rel_01
+
+cam
+    Cheryl Craig 2020-01-07 - cam_cesm2_1_rel_41 - components/cam (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_41
+
+    misc changes for release
+     - Fix bug in MG metadata
+     - Fix path for chemmech file
+     - Fix definitions of seq_flux_mct_albdir and seq_flux_mct_albdif
+     - Bug fix for Q925 in cam_diagnostics
+
+
+    Brian Eaton 2020-01-06 - cam_cesm2_1_rel_40 - components/cam (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_40
+
+    Add updates to axial angular momentum conservation/fixer requested by NorESM group.
+    BFB except when AM conservation and/or fixer is turned on (both off by default).
+
+
+cesm
+    Chris Fischer 2020-01-22 - cesm2.1.2-rc.04 - (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/cesm/tags/cesm2.1.2-rc.04
+
+    Add paleo compset B127ka and BmidH.
+    Add describe_version script
+    Changes needed to finish 2deg DECK
+
+
+cime
+    Chris Fischer 2020-02-03 - cime5.6.32 - cime (cesm2.1.2-rc.04)
+    https://github.com/ESMCI/cime/tags/cime5.6.32
+
+        - Update intel and cprnc on izumi
+
+    Chris Fischer 2020-01-28 - cime5.6.31 - cime (cesm2.1.2-rc.04)
+    https://github.com/ESMCI/cime/tags/cime5.6.31
+
+        - Fixes domain filename in input_data_list.
+
+
+    Chris Fischer 2020-01-24 - cime5.6.30 - cime (cesm2.1.2-rc.04)
+    https://github.com/ESMCI/cime/tags/cime5.6.30
+
+        - Add timeouts for ftp and wget logins.
+        - Fix chmod command in safe_copy
+
+
+    Chris Fischer 2020-01-21 - cime5.6.29 - cime (cesm2.1.2-rc.04)
+    https://github.com/ESMCI/cime/tags/cime5.6.29
+
+        - Stampede2 module updates.
+        - Restore 2.1.1 behavior for JRA compsets.
+        - Allow writing T-forcing cplhist files even when running with SGLC.
+        - Updates for the cesm2 ensemble run on aleph.
+        - Convert user requested walltime to match walltime_format.
+
+
+cism
+    William Sacks 2020-01-27 - cism-release-cesm2.1.2_02 - components/cism (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/cism-wrapper/tags/cism-release-cesm2.1.2_02
+
+    Update documentation and manage_externals
+
+    (No impact on code.)
+
+
+    Kate Thayer-Calder 2020-01-13 - cism-release-cesm2.1.2_01 - components/cism (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/cism-wrapper/tags/cism-release-cesm2.1.2_01
+
+    B4B bug fixes to the time manager to support longer runs, update test list to do correct wall clock times and change Hobart to Izumi
+
+
+clm
+    Erik Kluzek 2019-11-19 - release-clm5.0.30 - components/clm (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.30
+
+    Small updates. Update esxternals: mosart, rtm, cime, cism to versions in cesm2.1.2 tag. Also a change to prescribed soil-moisture.
+
+
+mosart
+    Erik Kluzek 2019-12-18 - release-cesm2.0.04 - components/mosart (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/mosart/tags/release-cesm2.0.04
+
+    Bring in a bug-fix for cold-starts
+
+
+pop
+    Michael Levy 2020-01-21 - pop2_cesm2_1_rel_n09 - components/pop (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/POP2-CESM/tags/pop2_cesm2_1_rel_n09
+
+    I forgot to update change log in last tag...
+
+
+    Michael Levy 2020-01-21 - pop2_cesm2_1_rel_n08 - components/pop (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/POP2-CESM/tags/pop2_cesm2_1_rel_n07
+
+    Add support for CMIP6 OMIP (datm-pop-cice) compsets
+
+    new compsets (and tests in aux_pop and aux_pop_MARBL):
+    * G1850ECOIAF_JRA: enable ecosys with JRA forcing
+    * GOMIPECOIAF: follow OMIP protocols with CORE IAF forcing and ecosys
+    * GOMIPECOIAF_JRA: follow OMIP protocols with JRA forcing and ecosys
+    * C1850ECO_ECOCESM20: ecosys configured with CESM2.0 settings
+
+    OMIP protocols specify that transient forcing (atmospheric CO2, pCFC, pSF6, dust/black carbon deposition, nitrogen deposition) is synchronized with sixth (last) cycle of the forcing
+
+    Relies on a CIME tag containing https://github.com/ESMCI/cime/pull/3361
+
+    ----
+
+    Climate changing for C & G compsets (except OCN_GRID=gx3v7, CORE normal year forcing, and no ecosys); bit-for-bit with OMIP submissions
+
+
+    Alper Altuntas 2020-01-14 - pop2_cesm2_1_rel_n07 - components/pop (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/POP2-CESM/tags/pop2_cesm2_1_rel_n07
+
+    Added a patch for closing the momentum budget.
+
+    No answer changes
+
+
+rtm
+    Erik Kluzek 2020-01-13 - release-cesm2.0.04 - components/rtm (cesm2.1.2-rc.04)
+    https://github.com/ESCOMP/rtm/tags/release-cesm2.0.04
+
+    Brings in updates from rtm1_0_70, moving testing to izumi and fixing wallclock times in tests.
+
+===============================================================
+Tag name: cesm2.1.2-rc.03
+Originator(s): CSEG
+Date: 12 Dec 2019 
+One-line Summary: More tags towards cesm2.1.2 release, first cesm2-le tag.
+
+
+Component tags used for this CESM release candidate tag :
+
+components/cam                     https://github.com/ESCOMP/CAM/tree/cam_cesm2_1_rel_38
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/ESMCI/cime/tree/cime5.6.28
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/release-cesm2.0.04
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.29
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.03
+components/pop                     https://github.com/ESCOMP/POP2-CESM/tree/pop2_cesm2_1_rel_n04
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.03
+components/ww3                     https://github.com/ESCOMP/WW3-CESM/tree/ww3_cesm2_1_rel_01
+
+cime
+    Chris Fischer 2019-12-12 - cime5.6.28 - cime (cesm2.1.2-rc.03)
+    https://github.com/ESMCI/cime/tags/cime5.6.28
+
+        - Update CIME_OUTPUT_ROOT for aleph.
+        - Update exp_types.
+
+
+    Chris Fischer 2019-12-12 - cime5.6.27 - cime (cesm2.1.2-rc.03)
+    https://github.com/ESMCI/cime/tags/cime5.6.27
+
+        - Change sst_aquap11 to sst_aquap_constant.
+    Answer changes for RCE
+
+
+clm
+    Erik Kluzek 2019-11-19 - release-clm5.0.29 - components/clm (cesm2.1.2-rc.03)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.29
+
+    Answer changes needed for prescribed soil-moisture and LAI. As well as changes for 1850 ndep and urbantv defaults for clm4_5.
+
+===============================================================
+Tag name: cesm2.1.2-rc.02
+Originator(s): CSEG
+Date: 25 Nov 2019 
+One-line Summary: CAM/CIME tags towards cesm2.1.2
+
+Component tags used for this CESM release candidate tag :
+
+components/cam                     https://github.com/ESCOMP/CAM/tree/cam_cesm2_1_rel_38
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/ESMCI/cime/tree/cime5.6.26
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/release-cesm2.0.04
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.28
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.03
+components/pop                     https://github.com/ESCOMP/POP2-CESM/tree/pop2_cesm2_1_rel_n04
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.03
+components/ww3                     https://github.com/ESCOMP/WW3-CESM/tree/ww3_cesm2_1_rel_01
+
+cam
+    Francis Vitt 2019-10-11 - cam_cesm2_1_rel_34 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tree/cam_cesm2_1_rel_34
+
+     Add support for 1.9x2.5 FWmaSD (WACCM middle atmosphere chemistry with
+     specified dynamics)
+
+     Correct "-chem" configure option in CAM_CONFIG_OPTS for FXmad* compsets
+      -- the 'additive' modifier for CAM_CONFIG_OPTS caused the setting to be
+         "-chem waccm_ma -chem waccm_mad" for CAM40%WXIED (WACCM-X with
+         D-region chemistry).  The change here distiguishes "CAM40%WXIE" from
+         "CAM40%WXIED" so that only waccm_mad is selected for CAM40%WXIED.
+
+
+    Cheryl Craig 2019-09-30 - cam_cesm2_1_rel_32 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tree/cam_cesm2_1_rel_32
+
+    Add aquaplanet Radiative Convective Equilibrium (RCE)
+
+    Requires cime5.6.24
+
+
+    Francis Vitt 2019-11-25 - cam_cesm2_1_rel_38 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_38
+
+    Update initial conditions for CAM and WACCM-MA compsets at 2-degrees
+
+
+    Cheryl Craig 2019-11-06 - cam_cesm2_1_rel_37 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_37
+
+    Update Externals.cfg in CAM checkouts to use ww3 from git instead of svn
+
+
+    Cheryl Craig 2019-10-28 - cam_cesm2_1_rel_36 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_36
+
+    Update AQP11 to AQPCONST
+
+    Requires cime5.6.25
+
+
+    Cheryl Craig 2019-10-28 - cam_cesm2_1_rel_35 - components/cam (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/CAM/tags/cam_cesm2_1_rel_35
+
+    For Brian Eaton
+
+    COSP updates
+    Answer changing for COSP
+
+
+cesm
+    Chris Fischer 2019-11-21 - cesm2.1.2-rc.02 - (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/cesm/tags/cesm2.1.2-rc.02
+
+    Updates from Mike Mills for 2-degrees resolution
+
+       Changes answers for
+          SMS_D_Ln9.f19_g17.BCO2x4cmip6.cheyenne_intel (Overall: PASS) details:
+          SMS_D_Ln9.f19_g17.BWma1PCTcmip6.cheyenne_intel (Overall: PASS) details:
+          SMS_Ld1.f19_g17.B1PCTcmip6.cheyenne_intel (Overall: PASS) details:
+          SMS_Ld1.f19_g17.BWma1PCTcmip6.cheyenne_intel (Overall: PASS) details:
+          SMS_Ld1.f19_g17.BWmaCO2x4cmip6.cheyenne_intel (Overall: PASS) details:
+
+
+cime
+    Chris Fischer 2019-11-25 - cime5.6.26 - cime (cesm2.1.2-rc.02)
+    https://github.com/ESMCI/cime/tags/cime5.6.26
+
+        - Add path for PFUNIT on izumi and add path for batch commands to $PATH.
+        - Initialize albdif and albdir
+
+
+    Chris Fischer 2019-10-25 - cime5.6.25 - cime (cesm2.1.2-rc.02)
+    https://github.com/ESMCI/cime/tags/cime5.6.25
+
+        - Cherry-picked AQPCONST changes.
+        - Fix mpi_bcast in seq_flux_mct.
+
+
+    Chris Fischer 2019-10-04 - cime5.6.24 - cime (cesm2.1.2-rc.02)
+    https://github.com/ESMCI/cime/tags/cime5.6.24
+
+        - Add namelist for minimum wind speed for atmOcn fluxes.
+        - Address objection to using case in workflow.
+        - Fix case of workflow job prior to case.run or case.test.
+        - Fix bug in SCAM.
+
+
+    Chris Fischer 2019-10-04 - cime5.6.23 - cime (cesm2.1.2-rc.02)
+    https://github.com/ESMCI/cime/tags/cime5.6.23
+
+    climate changing for C & G compsets
+        - Change rce_sst to fixed_sst to better reflect its purpose.
+        - Fix wallclocks in testlists.
+        - Archive metadata add support for lens experiment type.
+        - Changes to support Radiative Convective Equilibrium.
+        - Add support for CMIP6 OMIP, update JRA forcing files.
+        - Make the streams file legitiment xml files.
+
+
+    Chris Fischer 2019-08-26 - cime5.6.22 - cime (cesm2.1.2-rc.02)
+    https://github.com/ESMCI/cime/tags/cime5.6.22
+
+        - Fix nag on izumi.
+        - Update for cori modules.
+        - Update regex to match changing cheyenne login name.
+
+
+clm
+    Erik Kluzek 2019-08-20 - release-clm5.0.28 - components/clm (cesm2.1.2-rc.02)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.28
+
+    Add in the missing prescribed test directory. 
+    Change so that use_init_interp=T can be allowed for branches.
+    Get prescribed streams to be threadsafe.
+
+===============================================================
+Tag name: cesm2.1.2-rc.01
+Originator(s): CSEG
+Date: 14 Aug 2019 
+One-line Summary: First release candidate for cesm2.1.2
+
+Component tags used for this CESM release candidate tag :
+
+components/cam                     https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_31/components/cam
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/ESMCI/cime/tree/cime5.6.21
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/release-cesm2.0.04
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.27
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.03
+components/pop                     https://github.com/ESCOMP/POP2-CESM/tree/pop2_cesm2_1_rel_n04
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.03
+components/ww3                     https://github.com/ESCOMP/WW3-CESM/tree/ww3_cesm2_1_rel_01
+
+cam
+    Brian Eaton 2019-07-26 - release_tags/cam_cesm2_1_rel_31 - components/cam (cesm2.1.2-rc.01)
+    https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_31
+
+    fix problem with zonal average fields not added to FV simulations
+
+
+cime
+    Chris Fischer 2019-08-14 - cime5.6.21 - cime (cesm2.1.2-rc.01)
+    https://github.com/ESMCI/cime/tags/cime5.6.21
+
+        - Update config_machines to update pgi software stack on cheyenne
+        - If filename is abspath use for filepath.
+
+
+    Erik Kluzek 2019-06-24 - cime5.6.20 - cime (cesm2.1.2-rc.01)
+    https://github.com/ESMCI/cime/tags/cime5.6.19
+
+    Add presaero support in datm for SSP1-2.6
+
+
+clm
+    Erik Kluzek 2019-08-02 - release-clm5.0.27 - components/clm (cesm2.1.2-rc.01)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.27
+
+    0.125x0.125 mapping and surfdata data, 
+    update cime with SSP1-2.6 presaero. 
+    Add new prescribed_moisture streams option.
+    Fix a few issues.
+
+
+    William Sacks 2019-07-30 - release-clm5.0.26 - components/clm (cesm2.1.2-rc.01)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.26
+
+    Add a CN precision control call to fix problems related to small negative values
+
+    Changes answers for transient cases and a handful of other cases
+
+
+rtm
+    Erik Kluzek 2019-08-02 - release-cesm2.0.03 - components/rtm (cesm2.1.2-rc.01)
+    https://github.com/ESCOMP/rtm/tags/release-clm5.0.03
+
+    Bring in updates to rtm1_0_69 which brings in a fix so that 
+    you can set finidat_rtm="" to indicate a cold start.
+
+===============================================================
+Tag name: cesm2.1.1-rc.05
+Originator(s): CSEG
+Date: 30 May 2019 
+One-line Summary: Fifth release candidate for cesm2.1.1
+
+Component tags used for this CESM release candidate tag :
+
+components/cam                     https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_29/components/cam
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/ESMCI/cime/tree/cime5.6.19
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/release-cesm2.0.04
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.25
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.03
+components/pop                     https://github.com/ESCOMP/POP2-CESM/tree/pop2_cesm2_1_rel_n04
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.02
+components/ww3                     https://github.com/ESCOMP/WW3-CESM/tree/ww3_cesm2_1_rel_01
+
+cam
+    Francis Vitt 2019-05-29 - release_tags/cam_cesm2_1_rel_29 - components/cam (cesm2.1.1-rc.05)
+    https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_29
+
+    Change format of prescribed ozone file to NETCDF-3
+
+
+cime
+    Chris Fischer 2019-06-06 - cime5.6.19 - cime (cesm2.1.1-rc.05)
+    https://github.com/ESMCI/cime/tags/cime5.6.19
+
+        - Remove changes to case_run, fix a module issue on cori-knl.
+        - Fix was not py2 compatible, this one is.
+
+
+    Chris Fischer 2019-06-05 - cime5.6.18 - cime (cesm2.1.1-rc.05)
+    https://github.com/ESMCI/cime/tags/cime5.6.18
+
+       - Update modules for centos7-linux, fix py3 error in case_run.py.
+       - Update modules on cori-haswell and cori-knl.
+       - Add test_release as a test category consulted to determine if a compset -- grid combination is supported.
+
+     Round off answer changes for centos7-linux and cori
+
+    Chris Fischer 2019-05-29 - cime5.6.17 - cime (cesm2.1.1-rc.05)
+    https://github.com/ESMCI/cime/tags/cime5.6.17
+
+        - Update archive_metadata strip to lstrip.
+        - Correct error messages from wget interface.
+        - Fix README
+
+
+clm
+    Erik Kluzek 2019-05-24 - release-clm5.0.25 - components/clm (cesm2.1.1-rc.05)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.25
+
+    Point to Historical Carbon isotope files that are in NetCDF-3 format rather than NetCDF-4 format.
+    Some machines have problems with this format.
+
+
+pop
+    Alper Altuntas 2019-05-29 - pop2_cesm2_1_rel_n06 - components/pop (cesm2.1.1-rc.05)
+    https://github.com/ESCOMP/POP2-CESM/tags/pop2_cesm2_1_rel_n0X
+
+    Point to Historical Carbon isotope files that are in NetCDF-3 format rather than NetCDF-4 format.
+    Some machines have problems with this format.
+
+
+    Chris Fischer 2019-05-28 - pop2_cesm2_1_rel_n05 - components/pop (cesm2.1.1-rc.05)
+    https://github.com/ESCOMP/POP2-CESM/tags/pop2_cesm2_1_rel_n05
+
+    -Switch to GitHub!
+    -fix rpointer logic in buildnml
+    -fix marbl_in for multi-instance runs
+
+
+ww3
+    Alper Altuntas 2019-05-30 - ww3_cesm2_1_rel_01 - components/ww3 (cesm2.1.1-rc.05)
+    https://github.com/ESCOMP/WW3-CESM/tags/ww3_cesm2_1_rel_01
+
+    Switch to github
+
+===============================================================
+Tag name: cesm2.1.1-rc.04
+Originator(s): CSEG
+Date: 22 May 2019 
+One-line Summary: Fourth release candidate for cesm2.1.1
+
+Component tags used for this CESM beta tag :
+
+components/cam                     https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_28/components/cam
+components/cice                    https://github.com/ESCOMP/CESM_CICE5/tree/cice5_cesm2_1_1_20190321
+cime                               https://github.com/CESM-Development/cime/tree/cime5.6.16
+components/cism                    https://github.com/ESCOMP/cism-wrapper/tree/release-cesm2.0.04
+components/clm                     https://github.com/ESCOMP/ctsm/tree/release-clm5.0.24
+components/mosart                  https://github.com/ESCOMP/mosart/tree/release-cesm2.0.03
+components/pop                     https://svn-ccsm-models.cgd.ucar.edu/pop2/release_tags/pop2_cesm2_1_rel_n04
+components/rtm                     https://github.com/ESCOMP/rtm/tree/release-cesm2.0.02
+
+cam
+    Francis Vitt 2019-05-14 - release_tags/cam_cesm2_1_rel_28 - components/cam (cesm2.1.1-rc.04)
+    https://svn-ccsm-models.cgd.ucar.edu/cam1/release_tags/cam_cesm2_1_rel_??
+
+    Fix WACCMX temperature bug
+
+
+cime
+    Erik Kluzek 2019-04-11 - cime5.6.16 - cime (cesm2.1.1-rc.04)
+    https://github.com/ESMCI/cime/tags/cime5.6.?
+
+    Add CO2 and SSP presearo datasets for some of the SSP's: SSP5-8.5, SSP245, and SSP370
+    Change forcing years for present day I compsets.
+
+    Goes with the release-clm5.0.23 tag
+
+        - Add CO2 time-series for CMIP6 future scenarios and three prescribed
+          aerosol CMIP6 future scenarios.
+        - Bring changes to datm Present Day compsets from master to maint-5.6.
+        - pdate intel compiler version and ESMF lib for pleiades.
+        - Fix archive dir for stampede.
+
+
+clm
+    Erik Kluzek 2019-05-17 - release-clm5.0.24 - components/clm (cesm2.1.1-rc.04)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.24
+
+    Fix issues for SSP's going to 2100 and for 2-degree WACCM
+
+
+    Erik Kluzek 2019-05-13 - release-clm5.0.23 - components/clm (cesm2.1.1-rc.04)
+    https://github.com/ESCOMP/ctsm/tags/release-clm5.0.23
+
+    Make CO2 diagnostic for CMIP6 SSP future scenario compsets.
+
+    Update cime to version with datasets for SSP future scenarios.
+===============================================================
 Tag name: cesm2.1.1-rc.03
 Originator(s): CSEG
 Date: 15 May 2019 
