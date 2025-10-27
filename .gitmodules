@@ -33,7 +33,7 @@
         fxDONOTUSEurl = https://github.com/ESMCI/ccs_config_cesm.git
         #fxtag = ccs_config_cesm1.0.40
         # On branch: mizumomgridandfixes
-        fxtag = a1125d41f53ccbc354501522d14891d1aed60b30
+        fxtag = c6f856e33aac07a33ed9a61e515b656883a8b495
         fxrequired = ToplevelRequired
 
 [submodule "cime"]
@@ -128,7 +128,8 @@
         url = https://github.com/ESCOMP/mizuRoute
         fxDONOTUSEurl = https://github.com/ESCOMP/mizuRoute
         fxrequired = ToplevelRequired
-        fxtag = v3.0.0
+        #fxtag = v3.0.0
+        fxtag = f29878ed5499fccba9c3e8096cad0ad5ad28392c
 
 [submodule "mosart"]
         path = components/mosart
