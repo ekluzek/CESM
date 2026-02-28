@@ -128,7 +128,8 @@
         url = https://github.com/ESCOMP/mizuRoute
         fxDONOTUSEurl = https://github.com/ESCOMP/mizuRoute
         fxrequired = ToplevelRequired
-        fxtag = v3.0.1
+        #fxtag = v3.0.1
+        fxtag = 34cec03b53efd2006bfd033e879d6fa6ede64684
 
 [submodule "mosart"]
         path = components/mosart
